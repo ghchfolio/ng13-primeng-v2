@@ -5,18 +5,19 @@
     <!-- tabs -->
     <ul class="nav nav-pills justify-content-center my-4">
         <li class="nav-item">
-            <a href="#cartoonCharacters" class="nav-link" data-bs-toggle="tab">Cartoon Characters</a>
+            <a href="#cartoonCharacters" class="nav-link active" aria-current="page" data-bs-toggle="tab">Cartoon
+                Characters</a>
         </li>
         <li class="nav-item">
-            <a href="#checklistTabContent" class="nav-link active" data-bs-toggle="tab">Checklist</a>
+            <a href="#checklistTabContent" class="nav-link" data-bs-toggle="tab">Checklist</a>
         </li>
     </ul>
 
     <!-- tabs content -->
     <div class="tab-content p-4">
         <!-- cartoon tab  -->
-        <div class="tab-pane fade" id="cartoonCharacters">
-            <h2 class="h6 text-center">Cartoons Characters (basic table)</h2>
+        <div class="tab-pane fade show active" id="cartoonCharacters">
+            <h2 class="h6 text-center">Cartoons Characters</h2>
 
             <!-- cartoon data table basic, pagination-->
             <p-table #dt [value]="cartoonData" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
@@ -65,87 +66,88 @@
 
         </div>
 
-    </div>
+        <!-- checklist tab -->
+        <div class="tab-pane fade" id="checklistTabContent">
+            <h2 class="h6 text-center">Checklist</h2>
 
-    <!-- checklist tab -->
-    <div class="tab-pane fade show active" id="checklistTabContent">
-        <h2 class="h6 text-center">Checklist</h2>
+            <form action="">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="npmOrCdn" checked>
+                    <label class="form-check-label" for="npmOrCdn">
+                        NPM / CDN available
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="withoutAngular" checked>
+                    <label class="form-check-label" for="withoutAngular">
+                        With/without Angular
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="bs5compatible" checked>
+                    <label class="form-check-label" for="bs5compatible">
+                        Works with Bootsrap 5
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="enhancable" checked>
+                    <label class="form-check-label" for="enhancable">
+                        Extensible (can add classes to make even more responsive)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="configurable" checked>
+                    <label class="form-check-label" for="configurable">
+                        Configurable
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="builtInResponsivness" checked>
+                    <label class="form-check-label" for="builtInResponsivness">
+                        Responsive features - good out of box, plus additional features like hiding columns, fixed
+                        positions
+                        etc.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="builtInExportButtons">
+                    <label class="form-check-label" for="builtInExportButtons">
+                        Export buttons - copy, pdf, xslx, print (separate packages available)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="pagination" checked>
+                    <label class="form-check-label" for="pagination">
+                        Pagination
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sort" checked>
+                    <label class="form-check-label" for="sort">
+                        Sort
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="searchFilter" checked>
+                    <label class="form-check-label" for="searchFilter">
+                        Search / filter
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="styleable" checked>
+                    <label class="form-check-label" for="styleable">
+                        Easily styled table and buttons (easy enough)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="documentation" checked>
+                    <label class="form-check-label" for="documentation">
+                        Good documentation and YT vids
+                    </label>
+                </div>
+            </form>
+        </div>
 
-        <form action="">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="npmOrCdn" checked>
-                <label class="form-check-label" for="npmOrCdn">
-                    NPM / CDN available
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="withoutAngular" checked>
-                <label class="form-check-label" for="withoutAngular">
-                    With/without Angular
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="bs5compatible" checked>
-                <label class="form-check-label" for="bs5compatible">
-                    Works with Bootsrap 5
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="enhancable" checked>
-                <label class="form-check-label" for="enhancable">
-                    Extensible (can add classes to make even more responsive)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="configurable" checked>
-                <label class="form-check-label" for="configurable">
-                    Configurable
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="builtInResponsivness" checked>
-                <label class="form-check-label" for="builtInResponsivness">
-                    Responsive features - good out of box, plus additional features like hiding columns, fixed positions
-                    etc.
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="builtInExportButtons">
-                <label class="form-check-label" for="builtInExportButtons">
-                    Export buttons - copy, pdf, xslx, print (separate packages available)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="pagination" checked>
-                <label class="form-check-label" for="pagination">
-                    Pagination
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="sort" checked>
-                <label class="form-check-label" for="sort">
-                    Sort
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="searchFilter" checked>
-                <label class="form-check-label" for="searchFilter">
-                    Search / filter
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="styleable" checked>
-                <label class="form-check-label" for="styleable">
-                    Easily styled table and buttons (easy enough)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="documentation" checked>
-                <label class="form-check-label" for="documentation">
-                    Good documentation and YT vids
-                </label>
-            </div>
-        </form>
     </div>
 
     <hr>
