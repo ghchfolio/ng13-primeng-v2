@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -32,7 +31,6 @@ export class AppComponent {
         { field: 'name', header: 'Name' },
         { field: 'webrank', header: 'webrank' },
     ];
-    //comments
 
     constructor() { }
 

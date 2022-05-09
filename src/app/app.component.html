@@ -7,7 +7,7 @@
         <li class="nav-item">
             <a href="#cartoonCharacters" class="nav-link" data-bs-toggle="tab">Cartoon Characters</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="display: none;">
             <a href="#commentsTabContent" class="nav-link" data-bs-toggle="tab">Comments</a>
         </li>
         <li class="nav-item">
@@ -22,10 +22,9 @@
             <h2 class="h6 text-center">Cartoons Characters (basic table)</h2>
 
             <!-- cartoon data table basic, pagination-->
-            <p-table [value]="cartoonData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-                responsiveLayout="scroll"
+            <p-table [value]="cartoonData" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-                [rowsPerPageOptions]="[10,25,50]">
+                [rowsPerPageOptions]="[5,25,50]">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Name</th>
@@ -65,7 +64,7 @@
     </div>
 
     <!-- comments tab -->
-    <div class="tab-pane fade" id="commentsTabContent">
+    <div class="tab-pane fade" id="commentsTabContent" style="display:none">
         <h2 class="h6 text-center">Comments</h2>
 
         <!-- comments data table -->
@@ -120,13 +119,32 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="builtInResponsivness" checked>
                 <label class="form-check-label" for="builtInResponsivness">
-                    Responsive features - fixed columns, toggle columns
+                    Responsive features - good out of box, plus additional features like hiding columns, fixed positions
+                    etc.
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="builtInExportButtons" checked>
                 <label class="form-check-label" for="builtInExportButtons">
                     Export buttons - copy, pdf, xslx, print
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="pagination" checked>
+                <label class="form-check-label" for="pagination">
+                    Pagination
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="sort">
+                <label class="form-check-label" for="sort">
+                    Sort ?
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="searchFilter">
+                <label class="form-check-label" for="searchFilter">
+                    Search / filter ?
                 </label>
             </div>
             <div class="form-check">
@@ -138,7 +156,7 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="documentation">
                 <label class="form-check-label" for="documentation">
-                    Good documentation (a lot to sift through, will have to check other resources too)
+                    Good documentation and YT vids
                 </label>
             </div>
         </form>
